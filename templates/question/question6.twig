@@ -1,0 +1,36 @@
+{% extends 'base_general.html.twig' %}
+
+{% block body %}
+
+    <section class="page-section" id="contact">
+        <div class="container mt-5">
+            <!-- Contact Section Heading-->
+            <div class="text-center">
+                <h2 class="page-section-heading text-primary d-inline-block mb-0">Pregunta 6</h2>
+                <br>
+                <h4 class="text-secondary d-inline-block mb-0">Dado el esquema. ¿Hallar los departamentos que tienen más de tres empleados? ¿Mostrar el número de empleados de esos departamentos?</h4>
+            </div>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Contact Section Content-->
+            <div class="row justify-content-center">
+                Se puede ver la consulta en el repositorio /src/Repository/DepartamentoRepository.php
+            </div>
+
+            <div class="row justify-content-center">
+                Los departamentos con mas de 3 empleados son:
+            </div>
+            <div class="row justify-content-center">
+                <ul>
+                {% for departament in departamentWithMoreThanThreeEmpleados %}
+                    <li>El departamento {{ departament['id'] }} tiene {{ departament[1] }} empleados.</li>
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base_general.html.twig' %}
+
+{% block body %}
+
+    <section class="page-section" id="contact">
+        <div class="container mt-5">
+            <!-- Contact Section Heading-->
+            <div class="text-center">
+                <h2 class="page-section-heading text-primary d-inline-block mb-0">Pregunta 3</h2>
+                <br>
+                <h4 class="text-secondary d-inline-block mb-0">Realizar el controlador para un endpoint de una API REST que permite modificar una entidad de tipo persona</h4>
+            </div>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Contact Section Content-->
+            <div class="row justify-content-center">
+                <ol>
+                    <li >
+                        Primero entrar por ssh o por terminal a donde quiera desplegarlo.
+                    </li>
+                    <li >
+                        git clone URL_REPOSITORIO
+                    </li>
+                    <li >
+                        composer install
+                    </li>
+                    <li >
+                        php bin/console doctrine:schema:create
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+{% endblock %}

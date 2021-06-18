@@ -1,0 +1,44 @@
+{% extends 'base_general.html.twig' %}
+
+{% block body %}
+
+    <section class="page-section" id="contact" xmlns="http://www.w3.org/1999/html">
+        <div class="container mt-5">
+            <!-- Contact Section Heading-->
+            <div class="text-center">
+                <h2 class="page-section-heading text-primary d-inline-block mb-2">Pregunta 1</h2>
+                <br>
+                <h4 class="text-secondary d-inline-block mt-2">Tenemos una variable con la siguiente cadena de texto: “El próximo día 21/05/2019 se celebrará desde las 14 a las 15:30 horas el congreso de …”
+                    Almacenar en dos variables Datatime la hora de inicio y la hora de fin, sabiendo que la fecha siempre va a ser numérica separada por barras o guiones y las horas van a tener la estructura “desde las {hora de inicio} a las {hora_fin} horas”, pudiendo darnos sólo la hora o la hora y minutos.
+                </h4>
+            </div>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Contact Section Content-->
+            <form action="{{ url('questionanswer') }}">
+                <div class="row justify-content-center">
+                    <textarea id="stringTest" cols="70" name="stringTest" placeholder="¡Escribe lo que quieras!" ></textarea>
+                </div>
+                <div class="row justify-content-center mt-2 mb-2">
+                    <button id="extractData" type="submit" class="btn btn-primary" > Extraer Datetime</button>
+                </div>
+                <div class="row justify-content-center">
+                    Resolucion en "/src/Controller/QuestionController.php", en el método questionAnswer()
+                </div>
+                <div class="row justify-content-center">
+                    {% if dateTimeInicio is defined and dateTimeInicio != false and dateTimeFin is defined and dateTimeFin != false %}
+                        Fecha Inicio: <strong>{{ dateTimeInicio|date("d/m/Y H:i:s") }}</strong>
+                    </div>
+                    <div class="row justify-content-center">
+                        Fecha Fin: <strong>{{ dateTimeFin|date("d/m/Y H:i:s") }}</strong>
+                    {% endif %}
+                </div>
+
+            </form>
+        </div>
+    </section>
+{% endblock %}

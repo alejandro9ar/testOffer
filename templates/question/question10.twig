@@ -1,0 +1,38 @@
+{% extends 'base_general.html.twig' %}
+
+{% block body %}
+
+    <section class="page-section" id="contact">
+        <div class="container mt-5">
+            <!-- Contact Section Heading-->
+            <div class="text-center">
+                <h2 class="page-section-heading text-primary d-inline-block mb-0">Pregunta 10</h2>
+                <br>
+                <h4 class="text-secondary d-inline-block mb-0">Tenemos dos tablas en dos bases de datos diferentes, y queremos sincronizar el saldo entre ambas tablas en las cuales nos facilitan la fecha de última modificación de cada registro.  En el caso de que se modifique el saldo en ambas desde la última ejecución del script, nos quedaremos con el saldo de la primera.
+                    La fecha que se ejecutó por última vez el script de sincronización esta almacenada en la variable last_run.
+                    Por simplificar, partimos de que la tabla1 y tabla2 están ya almacenados en arrays de la siguiente forma, donde id es el idéntico para el mismo usuario en las diferentes tablas (no implementar acceso a bbdd):
+                </h4>
+            </div>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Contact Section Content-->
+            <div class="row justify-content-center">
+                No he llegado a entender el problema quizás al 100%, su resolucion se encuentra en "/src/Controller/QuestionController.php, método question10().
+            </div>
+            <div class="row justify-content-center">
+                Fecha de actualizacion: <strong>{{ fecha|date("d/m/Y H:i:s") }}</strong>
+            </div>
+            <div class="row justify-content-center">
+                Tabla: <strong>{{ tabla }}</strong>
+            </div>
+            <div class="row justify-content-center">
+                Saldo: <strong>{{ saldo }}</strong>
+            </div>
+
+        </div>
+    </section>
+{% endblock %}

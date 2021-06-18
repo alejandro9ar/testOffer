@@ -1,0 +1,39 @@
+{% extends 'base_general.html.twig' %}
+
+{% block body %}
+
+    <section class="page-section" id="contact">
+        <div class="container mt-5">
+            <!-- Contact Section Heading-->
+            <div class="text-center">
+                <h2 class="page-section-heading text-primary d-inline-block mb-0">Pregunta 5</h2>
+                <br>
+                <h4 class="text-secondary d-inline-block mb-0">) Tenemos un proyecto asociado a un repositorio git y estamos desarrollando en local sobre la rama de “feature_xxx”, nos solicitan resolver un hotfix de inmediato a partir de la última versión estable de “develop”. ¿Cómo procederías?</h4>
+            </div>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Contact Section Content-->
+            <div class="row justify-content-center">
+                <ol>
+                    <li >
+                        Commit de los cambios que tengas o almacenamiento en Stash (PhpStorm)
+                    </li>
+                    <li >
+                        New branch 'hotfix' desde 'develop'.
+                    </li>
+                    <li >
+                        Subida de rama hotfix, revisión correspondiente y mezcla en develop
+                    </li>
+                    <li >
+                        Merge develop into feature_XXX para tenerla actualizada y poder continuar con el desarrollo, en caso de haber conflictos solucionarlos.
+                    </li>
+
+                </ol>
+            </div>
+        </div>
+    </section>
+{% endblock %}

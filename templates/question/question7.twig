@@ -1,0 +1,38 @@
+{% extends 'base_general.html.twig' %}
+
+{% block body %}
+
+    <section class="page-section" id="contact">
+        <div class="container mt-5">
+            <!-- Contact Section Heading-->
+            <div class="text-center">
+                <h2 class="page-section-heading text-primary d-inline-block mb-0">Pregunta 7 </h2>
+                <br>
+                <h4 class="text-secondary d-inline-block mb-0">Implementar script jQuery para cambiar el comportamiento de los enlaces a ficheros PDF, para que se abran en una página distinta a la actual (agregar target=” _blank”).</h4>
+            </div>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Contact Section Content-->
+            <div class="row justify-content-center mb-6">
+                <a class="btn btn-primary mb-5" href="{{ asset('CV - Alejandro Arroyo - Malaga (English).pdf') }}">
+                    Ver PDF
+                </a>
+            </div>
+            <div class="row justify-content-center mt-6">
+                <a class="btn btn-primary mt-6" href="{{ asset('fotoquiensoy.JPG') }}">
+                    Ver Imagen
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascript %}
+<script>
+    $('a[href$=".pdf"]').attr('target', '_blank');
+</script>
+{% endblock %}
